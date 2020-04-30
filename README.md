@@ -115,3 +115,18 @@ console.log(chars[char]);
 } 
 }
 ```
+```$ name(arguments){}``` : statement definition <br>
+Example:
+```
+var percent = 100/100;
+$ full(percent){
+    console.log("percent is full.");
+}
+
+fn full (arg) {
+  if (arg==1) {
+    return(true);
+  }
+  return(false);
+}
+```
