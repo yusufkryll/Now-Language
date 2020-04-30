@@ -37,3 +37,23 @@ return(false);
 
 
 ```
+
+```delay(miliseconds:int)``` : wait for miliseconds. <br>
+Note: delay must be in layer(async).<br>
+Example:
+```
+layer(async){
+console.log("Hello world.");
+delay(1000);
+console.log("Waited for 1000 miliseconds.");
+for(i=10){
+delay(100);
+console.log("delay in for loop.");
+}
+}
+```
+
+
+
+
+
