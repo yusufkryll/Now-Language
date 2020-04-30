@@ -86,7 +86,7 @@ console.log("delay in for loop.");
 }
 }
 ```
-```add path``` : import now file <br>
+```add path``` : import .now file <br>
 Example:<br>
 index.now
 ```
