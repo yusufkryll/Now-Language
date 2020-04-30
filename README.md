@@ -39,7 +39,31 @@ return(false);
 ```
 
 ## Document
-
+```var variablename = variable:any``` : variable definition <br>
+Example:
+```
+var hello = "hello world";
+console.log(hello);
+```
+```for(again:int){}``` : for loop <br>
+Example:
+```
+for(i=10){
+console.log(i);
+}
+```
+```while(var:bool){}``` : while loop <br>
+Example:
+```
+var a = true;
+var s = "";
+while(a){
+s+="0";
+if(s=="00000"){
+a=false;
+}
+}
+```
 ```delay(miliseconds:int)``` : wait for miliseconds. <br>
 Note: delay must be in layer(async).<br>
 Example:
@@ -52,18 +76,5 @@ for(i=10){
 delay(100);
 console.log("delay in for loop.");
 }
-}
-```
-```var variablename = variable:any``` : variable definition <br>
-Example:
-```
-var hello = "hello world";
-console.log(hello);
-```
-```for(again:int){}``` : for loop <br>
-Example:
-```
-for(i=10){
-console.log(i);
 }
 ```
