@@ -38,6 +38,8 @@ return(false);
 
 ```
 
+## Document
+
 ```delay(miliseconds:int)``` : wait for miliseconds. <br>
 Note: delay must be in layer(async).<br>
 Example:
@@ -52,8 +54,16 @@ console.log("delay in for loop.");
 }
 }
 ```
-
-
-
-
-
+```var variablename = variable:any``` : variable definition <br>
+Example:
+```
+var hello = "hello world";
+console.log(hello);
+```
+```for(again:int){}``` : for loop <br>
+Example:
+```
+for(i=10){
+console.log(i);
+}
+```
