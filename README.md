@@ -53,6 +53,27 @@ if(bool){
 console.log("bool is true.");
 }
 ```
+```else{}``` : else <br>
+Example:
+```
+var bool = false;
+if(bool){
+console.log("bool is true.");
+}else{
+console.log("bool is false.");
+}
+```
+```else if(var:bool){}``` : else if <br>
+Example:
+```
+var a = false;
+var b = true;
+if(a){
+console.log("a");
+}else if(b){
+console.log("b");
+}
+```
 ```for(again:int){}``` : for loop <br>
 Example:
 ```
