@@ -45,6 +45,14 @@ Example:
 var hello = "hello world";
 console.log(hello);
 ```
+```if(var:bool){}``` : if condition <br>
+Example:
+```
+var bool = true;
+if(bool){
+console.log("bool is true.");
+}
+```
 ```for(again:int){}``` : for loop <br>
 Example:
 ```
@@ -78,3 +86,21 @@ console.log("delay in for loop.");
 }
 }
 ```
+```add path``` : import now file <br>
+Example:<br>
+index.now
+```
+add utils.now;
+for(game in games){
+console.log(games[game]);
+}
+```
+utils.now
+```
+var games = [
+"pacman",
+"tetris",
+"Q*bert"
+];
+```
+
