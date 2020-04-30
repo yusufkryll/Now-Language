@@ -1,5 +1,6 @@
 # Now programming language
-Website: nowlang.netlify.app
+Website: nowlang.netlify.app <br>
+Youtube: https://youtu.be/b3pY4MgOiY4
 
 ## How to run?
 ```nowlang [.now file] [optional arguments]```
