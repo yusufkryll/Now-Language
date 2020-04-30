@@ -1,3 +1,6 @@
+## Now programming language
+Website: nowlang.netlify.app
+
 # How to run?
 ```nowlang [.now file] [optional arguments]```
 
@@ -5,7 +8,7 @@ Optional arguments:<br>
 --tojs: convert to js file<br>
 --tojsandrun: convert to js file and run
 
-# Example syntax
+# Example code
 
 ```
 #use add for import now file
