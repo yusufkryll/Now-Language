@@ -104,3 +104,14 @@ var games = [
 ];
 ```
 
+```fn name(arguments){}``` : function definition <br>
+Example:
+```
+writechars("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper porta commodo. Nunc ut neque dignissim, mattis nulla ut, dapibus neque.");
+fn writechars (str) {
+var chars = str.split("");
+for(char in chars){
+console.log(chars[char]);
+} 
+}
+```
