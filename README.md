@@ -1,7 +1,7 @@
 # How to run?
-```nowlang [.now file] [extra arguments]```
+```nowlang [.now file] [optional arguments]```
 
-Extra arguments:
+Optional arguments:
 --tojs: convert to js file
 --tojsandrun: convert to js file and run
 
