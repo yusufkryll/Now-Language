@@ -1,3 +1,10 @@
+# How to run?
+```nowlang [.now file] [extra arguments]```
+
+Extra arguments:
+--tojs: convert to js file
+--tojsandrun: convert to js file and run
+
 # Example syntax
 
 ```
