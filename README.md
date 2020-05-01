@@ -1,4 +1,5 @@
 # Now programming language
+[![Build Status](https://travis-ci.com/JSDevloop/Now-Language.svg?branch=master)](https://travis-ci.com/JSDevloop/Now-Language) <br>
 Website: <br> https://nowlang.netlify.app <br>
 Youtube: <br> https://youtu.be/b3pY4MgOiY4
 
