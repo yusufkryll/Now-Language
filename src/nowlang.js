@@ -51,12 +51,12 @@ function compile(code) {
                 result += "return" + pack.words.slice(1).join("") + ";\n";
             }
             else if(pack.words.join("").split("(")[0].trim() == "delay"){
-                var body = pack.words.join("").split("(").slice(1);
+                let body = pack.words.join("").split("(").slice(1);
                 body[0] = "(" + body[0];
                 result += _strt + "await new Promise(resolve => setTimeout(resolve, " + body.join("") + "));\n" + _end;
             }
             else if(pack.words.join("").split("(")[0].trim() == "onJS"){
-                var body = pack.words.join("").split(/([(])/).slice(1);
+                let body = pack.words.join("").split(/([(])/).slice(1);
                 body[0] = body[0];
                 result += _strt + body.join("").substring(2, body.join("").length-2); + "\n" + _end; // jshint ignore:line
             }
