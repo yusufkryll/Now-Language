@@ -23,11 +23,16 @@ function compile(code) {
             first = false;
             var _strt = "";
             var _end = "";
-            var looptime = pack.words.join("").trim().split(/([)])/).pop().split(":")[1];
+            var looptime = pack.words.join("").trim().split(/([)])/).pop().split("::")[1];
             if(pack.words.join("").split("(")[0].trim() != "if" && pack.words.join("").split("(")[0].trim() != "layer" && pack.words.join("").split("(")[0].trim() != "loop" && !pack.words.join("").startsWith("else") && pack.words.join("").split("(")[0].trim() != "else if" && pack.words.join("").split("(")[0].trim() != "while" && pack.words.join("").split("(")[0].trim() != "for"){
                 if(looptime != undefined){
                     pack.words[pack.words.length-1] = pack.words.join("").trim().split(":").slice(0,1).join("");
-                    _strt = `for(freeloop=${looptime};freeloop>0;freeloop--){`;
+                    if(looptime.substring(0,1)==">"){
+                        looptime = looptime.substring(1);
+                        _strt = `for(freeloop=0;freeloop<${looptime};freeloop++){`;
+                    }else{
+                        _strt = `for(freeloop=${looptime};freeloop>0;freeloop--){`;
+                    }
                     _end = `}`;
                 }
             }
@@ -119,14 +124,15 @@ function compile(code) {
                 var all = pack.words.join("");
                 all = all.replace("<<" , "{");
                 all = all.replace(">>" , "}");
-                var sp = pack.words.join("").split("(");
+                var sp = pack.words.join("").split(/([(])/);
                 var body = sp.slice(1);
-                body[0] = "(" + body[0];
-                if(ops.some(el => pack.words.join("").includes(el))) result += _strt + all  + _end + ";\n";
+                if(ops.some(el => pack.words.join("").includes(el))) {
+                    all = all.replace(".=","="+pack.words[0].split(".")[0]+".");
+                    result += _strt + all  + _end + ";\n";
+                }
                 else if(pack.words.join("") != "") 
                 {
                     result += _strt + sp[0] + body.join("") + ";\n" + _end;
-                    // console.log(pack.words.join(""));
                 }
             }
         }

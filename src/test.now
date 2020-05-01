@@ -1,7 +1,2 @@
-var i = 0;
-if (false) {
-
-}else{
-    console.log(i+freeloop):10;
-    console.log("hi"):5;
-}
+var a = "helloworld".split("");
+console.log(a[freeloop])::>a.length;

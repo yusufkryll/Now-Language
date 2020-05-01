@@ -1,9 +1,3 @@
-var i = 0;
-if(false)
-{
+var a = "helloworld".split("");
+for(freeloop=0;freeloop<a.length;freeloop++){console.log(a[freeloop]);
 }
-else
-{
-for(freeloop=10;freeloop>0;freeloop--){   console.log(i+freeloop)};
-for(freeloop=5;freeloop>0;freeloop--){   console.log("hi");
-}}
