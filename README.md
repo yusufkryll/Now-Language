@@ -200,3 +200,10 @@ l
 I
 *#
 ```
+```var:any .= var:any``` : it is equal to this property <br>
+Example:
+```
+var a = "string";
+a.=split(""); # a equal to [s, t, r, i, n, g]
+console.log(a);
+```
