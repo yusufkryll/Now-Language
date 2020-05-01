@@ -152,3 +152,51 @@ fn full (arg) {
   return(false);
 }
 ```
+```::> var:int``` : loop operator <br>
+Example:
+```
+var a = "I love NowLang.".split("");
+console.log(a[freeloop])::>a.length;
+#*
+results:
+I
+
+l
+o
+v
+e
+
+N
+o
+w
+L
+a
+n
+g
+.
+*#
+```
+```:: var:int``` : inverse loop operator <br>
+Example:
+```
+var a = "I love NowLang.".split("");
+console.log(a[freeloop])::a.length;
+#*
+results:
+.
+g
+n
+a
+L
+w
+o
+N
+
+e
+v
+o
+l
+
+I
+*#
+```
