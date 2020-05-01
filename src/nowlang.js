@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 var lang = require("./langgenerator.js").lang;
 const fs = require('fs');
 var nowlang = new lang();
@@ -37,7 +39,7 @@ function compile(code) {
                 }
             }
             if(pack.words.join("").trim().split(" ")[0] == "var"){
-                var all = pack.words.join("");
+                let all = pack.words.join("");
                 all = all.replace("<<" , "{");
                 all = all.replace(">>" , "}");
                 result += _strt + all + ";\n";
@@ -49,21 +51,21 @@ function compile(code) {
                 result += "return" + pack.words.slice(1).join("") + ";\n";
             }
             else if(pack.words.join("").split("(")[0].trim() == "delay"){
-                var body = pack.words.join("").split("(").slice(1);
+                let body = pack.words.join("").split("(").slice(1);
                 body[0] = "(" + body[0];
                 result += _strt + "await new Promise(resolve => setTimeout(resolve, " + body.join("") + "));\n" + _end;
             }
             else if(pack.words.join("").split("(")[0].trim() == "onJS"){
-                var body = pack.words.join("").split(/([(])/).slice(1);
+                let body = pack.words.join("").split(/([(])/).slice(1);
                 body[0] = body[0];
-                result += _strt + body.join("").substring(2, body.join("").length-2); + "\n" + _end;
+                result += _strt + body.join("").substring(2, body.join("").length-2); + "\n" + _end; // jshint ignore:line
             }
             else if(pack.words[0] == "add"){
                 result += partcode(fs.readFileSync(pack.words.slice(1).join("").split("\"").join("").trim()).toString());
             }
             else if(pack.words[0] == "fn"){
                 var name = pack.words.slice(1).join("").split("(")[0].trim();
-                var args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
+                let args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
                 args = args[0] + args[1];
                 if(args == undefined) args = "";
                 if(name == undefined) name = "";
@@ -72,7 +74,7 @@ function compile(code) {
             }
             else if(pack.words.join("").split("(")[0].trim() == "layer"){
                 
-                var args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
+                let args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
                 args = args[0] + args[1];
                 if(args == undefined) args = "";
                 result += "(" + args.replace(/([)(])/g,"") + "()=>{\n" + partcode(pack.words.join("").split(/([)])/).slice(2).join("")) + "\n})();\n";
@@ -81,14 +83,14 @@ function compile(code) {
                 result += "setInterval(() => \n" + "{\n" + partcode(pack.words.join("").split(/([)])/).slice(2).join("")) + "},1);\n";
             }
             else if(pack.words.join("").split("(")[0].trim() == "if"){
-                var args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
+                let args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
                 args = args[0] + args[1];
                 if(args == undefined) args = "";
                 result += "if" + args + "\n" +
                 "{\n" + partcode(pack.words.join("").split(/([)])/).slice(2).join("")) + "}\n";
             }
             else if(pack.words.join("").split("(")[0].trim() == "else if"){
-                var args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
+                let args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
                 args = args[0] + args[1];
                 if(args == undefined) args = "";
                 result += "else if" + args + "\n" +
@@ -99,14 +101,14 @@ function compile(code) {
                     "{\n" + partcode(pack.words.join("").trim().substring(4)) + "}\n";
             }
             else if(pack.words.join("").split("(")[0].trim() == "while"){
-                var args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
+                let args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
                 args = args[0] + args[1];
                 if(args == undefined) args = "";
                 result += "while" + args + "\n" +
                 "{\n" + partcode(pack.words.join("").split(/([)])/).slice(2).join("")) + "}\n";
             }
             else if(pack.words.join("").split("(")[0].trim() == "for"){
-                var args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
+                let args = pack.words.join("").split(/([(])/).slice(1).join("").split(/([)])/);
                 if(!args[0].includes("in")) args[0]+=";i>=0;i--";
                 args = args[0] + args[1];
                 if(args == undefined) args = "";
@@ -114,18 +116,18 @@ function compile(code) {
                 "{\n" + partcode(pack.words.join("").split(/([)])/).slice(2).join("")) + "}\n";
             }
             else if(pack.words[0].trim() == "$"){
-                var args = pack.words[1];
+                let args = pack.words[1];
                 if(args == undefined) args = "";
                 result += "if(" + pack.words.slice(1).join("").split(/([)])/)[0] + pack.words.join("").split(/([)])/)[1] + ")\n" +
                  "{\n" + partcode(pack.words.join("").split(/([)])/).slice(2).join("")) + "}\n";
             }
             else{
                 var ops = ["=", "!", ">", "<","-","+"];
-                var all = pack.words.join("");
+                let all = pack.words.join("");
                 all = all.replace("<<" , "{");
                 all = all.replace(">>" , "}");
                 var sp = pack.words.join("").split(/([(])/);
-                var body = sp.slice(1);
+                let body = sp.slice(1);
                 if(ops.some(el => pack.words.join("").includes(el))) {
                     all = all.replace(".=","="+pack.words[0].split(".")[0]+".");
                     result += _strt + all  + _end + ";\n";

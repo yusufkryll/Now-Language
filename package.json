@@ -4,11 +4,14 @@
   "description": "Now Programming Language",
   "main": "nowlang.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jshint src/nowlang.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JSDevloop/Now-Language.git"
+  },
+  "devDependencies": {
+    "jshint": "^2.6.0"
   },
   "keywords": [
     "Programming",
