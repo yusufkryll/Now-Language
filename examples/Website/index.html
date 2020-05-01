@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1" style="background-color: brown; color:wheat;border-radius: 10px; padding: 10px;"></h1>
+</body>
+<script>
+var text = "Now Programming Language".split("");
+(async()=>{
+for(ch in text){
+await new Promise(resolve => setTimeout(resolve, 100));
+document.getElementById("h1").innerHTML+=text[ch];
+}
+})();
+</script>
+</html>

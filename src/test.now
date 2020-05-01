@@ -1,2 +1,2 @@
-var a = "helloworld".split("");
+var a = "I love NowLang.".split("");
 console.log(a[freeloop])::>a.length;
