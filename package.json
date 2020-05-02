@@ -1,11 +1,11 @@
 {
   "name": "nowlang",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Now Programming Language",
-  "main": "src/nowlang.js",
+  "main": "bin/nwc.js",
   "esversion":8,
   "scripts": {
-    "test": "jshint src/nowlang.js"
+    "test": "jshint bin/nwc.js"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "url": "https://github.com/JSDevloop/Now-Language/issues"
   },
   "bin": {
-    "nwc": "src/nowlang.js"
+    "nwc": "bin/nwc.js"
   },
   "homepage": "https://github.com/JSDevloop/Now-Language#readme"
 }
