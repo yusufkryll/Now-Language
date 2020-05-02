@@ -1,10 +1,10 @@
 {
-  "name": "langgenerator",
+  "name": "nowlang",
   "version": "1.1.0",
   "description": "Now Programming Language",
-  "main": "nowlang.js",
+  "main": "env-playground/nowlang.js",
   "scripts": {
-    "test": "jshint src/nowlang.js"
+    "test": "jshint env-playground/nowlang.js"
   },
   "repository": {
     "type": "git",
