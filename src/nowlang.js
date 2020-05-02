@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* jshint esversion: 6 */
+/* jshint esversion: 8 */
 
 const Lang = require('./langgenerator.js').Lang;
 const fs = require('fs');

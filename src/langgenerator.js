@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 const fs = require('fs');
 const readline = require('readline');
 const rl = readline.createInterface({
