@@ -22,9 +22,10 @@ When commenting on issues in this repository, keep in mind:
     pointers to other languages which have them. We love hearing feedback about
     your experiences with other languages, but we also want to know why they are
     right for NowLang in particular.
-
+## Setup
+```npm i -g nowlang```
 ## How to run?
-```nowlang [.now file] [optional arguments]```
+```nwc [.now file] [optional arguments]```
 
 Optional arguments:<br>
 --tojs: convert to js file<br>
