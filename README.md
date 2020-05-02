@@ -14,7 +14,7 @@ There are many ways to contribute to NowLang.
 *  Submit bugs and help us verify fixes as they are checked in.
 *  Review the source code changes.
 *  Engage with other NowLang users and developers on [StackOverflow](https://stackoverflow.com/questions/tagged/nowlang).
-*  Help each other in the [NowLang Community Discord](https://discord.gg/nowlang).
+*  Help each other in the [NowLang Community Discord](https://discord.gg/jPnmQUh).
 When commenting on issues in this repository, keep in mind:
 
 -   reactions are more useful than comments to show support.
