@@ -1,6 +1,27 @@
 # Now programming language
+[![Build Status](https://travis-ci.com/JSDevloop/Now-Language.svg?branch=master)](https://travis-ci.com/JSDevloop/Now-Language) <br>
 Website: <br> https://nowlang.netlify.app <br>
 Youtube: <br> https://youtu.be/b3pY4MgOiY4
+
+## Contributing
+
+Anyone can participate in the discussion about language changes
+by participating on the NowLang language mailing list,
+by replying to issues in this repository,
+and by uploading documents, tests or other resources.
+
+There are many ways to contribute to NowLang.
+*  Submit bugs and help us verify fixes as they are checked in.
+*  Review the source code changes.
+*  Engage with other NowLang users and developers on [StackOverflow](https://stackoverflow.com/questions/tagged/nowlang).
+*  Help each other in the [NowLang Community Discord](https://discord.gg/jPnmQUh).
+When commenting on issues in this repository, keep in mind:
+
+-   reactions are more useful than comments to show support.
+-   Motivating examples help us understand why you want new features more than
+    pointers to other languages which have them. We love hearing feedback about
+    your experiences with other languages, but we also want to know why they are
+    right for NowLang in particular.
 
 ## How to run?
 ```nowlang [.now file] [optional arguments]```
