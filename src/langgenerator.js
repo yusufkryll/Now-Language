@@ -154,4 +154,4 @@ String.prototype.splitEx = function(delimiters) {
   return parts;
 };
 
-exports.lang = Lang;
+exports.Lang = Lang;
