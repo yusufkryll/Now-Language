@@ -2,9 +2,9 @@
   "name": "nowlang",
   "version": "1.1.0",
   "description": "Now Programming Language",
-  "main": "env-playground/nowlang.js",
+  "main": "src/nowlang.js",
   "scripts": {
-    "test": "jshint env-playground/nowlang.js"
+    "test": "jshint src/nowlang.js"
   },
   "repository": {
     "type": "git",
