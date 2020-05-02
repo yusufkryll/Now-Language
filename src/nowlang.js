@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /*jshint esversion: 6 */
 
 var lang = require("./langgenerator.js").lang;
