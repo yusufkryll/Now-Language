@@ -11,6 +11,8 @@
     "url": "git+https://github.com/JSDevloop/Now-Language.git"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
     "jshint": "^2.6.0"
   },
   "keywords": [
