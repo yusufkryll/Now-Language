@@ -27,7 +27,8 @@
     "url": "https://github.com/JSDevloop/Now-Language/issues"
   },
   "bin": {
-    "nwc": "bin/nwc.js"
+    "nwc": "bin/nwc.js",
+    "nw": "bin/nw.js"
   },
   "homepage": "https://github.com/JSDevloop/Now-Language#readme"
 }
