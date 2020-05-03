@@ -68,6 +68,27 @@ Example:
 var hello = "hello world";
 console.log(hello);
 ```
+```let option: variablename = variable:any``` : variable option <br>
+Example:
+```
+# Global
+layer(){
+let global: str = "code";
+}
+console.log(save["str"]); # result: code
+
+# Push
+push: name = "Michael";
+push: name = "Joseph";
+console.log(save["name"]); // result: ["Michael","Joseph"];
+
+# Input
+let input: "What is your favorite programming language?" = fav;
+console.log(fav);
+
+# Log
+let log: version = "0.1.4"; # result: 0.1.4
+```
 ```if(var:bool){}``` : if condition <br>
 Example:
 ```
