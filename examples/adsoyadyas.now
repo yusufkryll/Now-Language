@@ -1,0 +1,6 @@
+let input: "adınız: " = a;
+console.log("adınız " + a.toString());
+let input: "soyadınız: " = b;
+console.log("adınız ve soyadınız " + a.toString() + b.toString());
+let input: "yaş: " = c;
+console.log("adınız, soyadınız ve yaşınız " + a.toString() + b.toString() + c.toString());
